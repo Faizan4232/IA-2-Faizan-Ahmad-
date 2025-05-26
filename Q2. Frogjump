@@ -1,0 +1,20 @@
+Algorithm for Minimum Cost to Reach the Last Step (Frog Jump Problem)
+Input: An array height[] of size n representing the heights of the steps.
+Initialize an array f[] of size n to store the minimum cost to reach each step.
+Set:
+f[0] = 0 → No cost to stay on the first step.
+f[1] = |height[1] - height[0]| → Cost to jump from step 0 to step 1.
+
+Loop from i = 2 to n - 1 (for each step starting from the 3rd one):
+Compute the cost if the frog jumps one step:
+oneStep = f[i - 1] + |height[i] - height[i - 1]|
+
+Compute the cost if the frog jumps two steps:
+twoSteps = f[i - 2] + |height[i] - height[i - 2]|
+
+Choose the minimum of these two options:
+f[i] = min(oneStep, twoSteps)
+
+After the loop ends, the minimum cost to reach the last step is f[n - 1].
+
+Return f[n - 1] as the result.

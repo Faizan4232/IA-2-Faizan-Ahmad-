@@ -19,7 +19,7 @@ public class Q2FrogJump {
 
     public static void main(String[] args) {
         Q2FrogJump frogJump = new Q2FrogJump();
-        int[] height = {10, 30, 40, 20}; // Example input
+        int[] height = {10, 20, 30, 10};
         int result = frogJump.minCost(height);
         System.out.println("Minimum cost to reach the last step: " + result);
     }
